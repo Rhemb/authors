@@ -4,6 +4,7 @@ import axios from "axios";
 
 import AllAuthors from "./AllAuthors";
 import AddAuthor from './AddAuthor';
+import EditAuthor from "./EditAuthor";
 
 const Home = (props) => {
     const [allAuthors, setAllAuthors] = useState([]);
@@ -29,6 +30,7 @@ const Home = (props) => {
             <Routes>
                 <Route path='/' element={ <AllAuthors allAuthors={allAuthors} deleteAuthor={deleteAuthor}/>} />
                 <Route path='/new' element={<AddAuthor allAuthors={allAuthors} setAllAuthors={setAllAuthors} />} />
+                <Route path='/edit/:id' element={<EditAuthor allAuthors={allAuthors} setAllAuthors={setAllAuthors} />} />
             </Routes>
         </div>
 

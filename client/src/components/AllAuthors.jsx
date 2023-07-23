@@ -21,7 +21,7 @@ const AllAuthors = ({allAuthors, deleteAuthor}) => {
                         return (
                             <tr key={author._id}>
                                 <td>{author.authorName}</td>
-                                <td><Link className="btn btn-primary" to={`/edit/author/${author._id}`}>Edit</Link> | <button className="btn btn-danger" onClick={deleteHandler} id={author._id}>Delete</button></td>
+                                <td><Link className="btn btn-primary" to={`/authors/edit/${author._id}`}>Edit</Link> | <button className="btn btn-danger" onClick={deleteHandler} id={author._id}>Delete</button></td>
                             </tr>
                         )
                     })}
