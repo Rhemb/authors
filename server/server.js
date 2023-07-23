@@ -7,6 +7,7 @@ require('./config/mongoose-config');
 app.use(express.json(), express.urlencoded({extended: true}));
 
 //require route
+require('./routes/authorRoutes')(app);
 
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
