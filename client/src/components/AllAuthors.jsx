@@ -8,6 +8,7 @@ const AllAuthors = ({allAuthors, deleteAuthor}) => {
     } 
     return (
         <div>
+            <Link to={'/authors/new'}>Add New Author</Link>
             <table class="table table-striped">
                 <thead>
                     <tr>

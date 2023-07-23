@@ -3,6 +3,7 @@ import {Routes, Route, useNavigate} from 'react-router-dom';
 import axios from "axios";
 
 import AllAuthors from "./AllAuthors";
+import AddAuthor from './AddAuthor';
 
 const Home = (props) => {
     const [allAuthors, setAllAuthors] = useState([]);
@@ -20,7 +21,6 @@ const Home = (props) => {
             const updatedAllAuthors = allAuthors.filter(author => author._id !== res.data._id)
             setAllAuthors(updatedAllAuthors);
             navigate('/authors')
-
         })
     }
     return (
@@ -28,6 +28,7 @@ const Home = (props) => {
             <h1>Favorite Authors</h1>
             <Routes>
                 <Route path='/' element={ <AllAuthors allAuthors={allAuthors} deleteAuthor={deleteAuthor}/>} />
+                <Route path='/new' element={<AddAuthor allAuthors={allAuthors} setAllAuthors={setAllAuthors} />} />
             </Routes>
         </div>
 
