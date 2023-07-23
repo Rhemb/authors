@@ -8,4 +8,4 @@ mongoose.connect('mongodb://127.0.0.1/authors', {
     .catch( err => ("Something went wrong when connecting to the database", err))
 
 // require model
-require("../models/Authors");
+require("../models/Author");
