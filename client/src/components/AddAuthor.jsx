@@ -28,7 +28,7 @@ const AddAuthor = ({allAuthors, setAllAuthors}) => {
                 <form onSubmit={formHandler}>
                     <div className="form mb-3 d-flex flex-column">
                         <label className="form-label" htmlFor="authorName">Author Name</label>
-                        <input className="form-control" type="text" name="authorName" id="authorName" value={authorName} onChange={e => setAuthorName(e.target.value)}/>
+                        <input className="form-control" type="text" name="authorName" id="authorName" value={authorName._id} onChange={e => setAuthorName(e.target.value)}/>
                         { errors.authorName ? <p className="text-danger">{errors.authorName.message}</p> : null }
                     </div>
                     <div className="d-flex flex-row justify-content-center">

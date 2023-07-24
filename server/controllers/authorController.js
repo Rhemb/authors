@@ -7,6 +7,12 @@ module.exports = {
             .catch( err => res.status(400).json(err));
     },
 
+    findAuthor : (req, res) => {
+        Author.findById(req.params.id)
+            .then(oneAuthor => res.json(oneAuthor))
+            .catch( err => res.status(400).json(err));
+    },
+
     createAuthor: (req, res) => {
         Author.create(req.body)
             .then( newAuthor => res.json(newAuthor))

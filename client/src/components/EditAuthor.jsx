@@ -27,7 +27,7 @@ const EditAuthor = ({allAuthors, setAllAuthors}) => {
                 setAllAuthors(updatedAllAuthors);
                 navigate('/authors');
             })
-            .catch( err => { setErrors(err.response.data.errors) })
+            .catch( err => console.log(err))
     }
     return(
         <div>
